@@ -5,6 +5,8 @@ import Footer from './components/Footer.jsx'
 import ProjectPreview from './components/ProjectPreview.jsx'
 import RichContent from './components/RichContent.jsx'
 import Media from './components/Media.jsx'
+import Hero from './components/Hero.jsx'
+import ToolStack from './components/ToolStack.jsx'
 import projects from './data/projects.json'
 import caseStudies from './data/caseStudies.json'
 
@@ -25,12 +27,7 @@ function SectionHeader({ index, eyebrow, title, right }) {
 
 function Home() {
   return <>
-    <section className="site-shell hero relative"><div className="hero-kicker"><span className="status-dot" /> Tsalist Agna, or Nana <span className="hero-kicker-line" /> Product designer</div>
-      <div className="relative z-10"><h1 className="hero-title">Designing products.<br /><span className="hero-title-soft">Managing the process.</span><br />Making ideas <span className="hero-underline">real.</span></h1>
-        <div className="hero-bottom"><p className="max-w-[37rem] text-lg leading-relaxed text-ink-muted md:text-xl">I work across product design, project management, and implementation. I like shaping useful ideas, organizing the work, and understanding how the product gets built.</p>
-          <Link className="pill-button pill-dark" to="/#selected">Explore my work <span aria-hidden="true">↘</span></Link></div></div>
-      <div className="hero-portrait"><Media src="/image/profile_pixel.png" alt="Portrait of Tsalist Agna" loading="eager" /></div><span className="hero-spark" aria-hidden="true">✳</span><div className="hero-side-note">THOUGHTFUL BY DESIGN · HANDS ON BY NATURE</div>
-    </section>
+    <Hero />
     <section className="site-shell intro-strip" aria-label="How I work"><span>01 / FIND THE REAL PROBLEM</span><span>02 / MAKE CLEAR DECISIONS</span><span>03 / DESIGN TO EXECUTION</span></section>
     <section id="selected" className="site-shell section-space"><SectionHeader index="01" eyebrow="SELECTED WORK" title={<>Products I’ve<br />worked on.</>} />
       <div className="project-grid">{projects.map((p,i) => <ProjectPreview key={p.slug} project={p} index={i} featured={i === 0} />)}</div>
@@ -42,7 +39,7 @@ function Home() {
       <div><span className="approach-number">03</span><h3>Make it buildable.</h3><p>Prototype, collaborate, and use technical understanding to move from design toward implementation.</p></div>
     </div></div></section>
     <section id="about" className="site-shell section-space about-grid"><div><span className="eyebrow">03 / A LITTLE ABOUT ME</span><h2 className="font-display mt-5 text-5xl leading-[1.04] font-medium tracking-tight md:text-7xl">Curious about<br />the whole thing<span className="text-deep-accent">.</span></h2></div><div className="about-copy"><p>Hi, I’m Tsalist Agna, or Nana. I work across product design, project management, and development. I like understanding what people need, deciding what matters most, and seeing how an idea works in the real world.</p><p>Knowing how products are built helps me prototype, collaborate with developers, and make design decisions with implementation in mind.</p><Link to="/work" className="text-link">See the product work ↗</Link></div></section>
-    <section className="site-shell capabilities"><div className="capability-top"><span className="eyebrow">04 / CAPABILITIES</span><span>Design, coordination, and an understanding of the build.</span></div><div className="capability-grid"><div><h3>Product &amp; UI/UX Design</h3><p>Understanding problems, mapping flows, and designing clear interfaces for apps, games, and websites.</p></div><div><h3>Project Management</h3><p>Organizing tasks, priorities, and collaboration from idea toward execution.</p></div><div><h3>Technical Implementation</h3><p>Prototyping and building with an awareness of feasibility and development constraints.</p></div></div><div className="tools-line"><span className="eyebrow">MY STACK</span><span>Project Manager · Figma &amp; Sketch · SwiftUI · React · JavaScript · WordPress</span></div></section>
+    <section className="site-shell capabilities"><div className="capability-top"><span className="eyebrow">04 / CAPABILITIES</span><span>Design, coordination, and an understanding of the build.</span></div><div className="capability-grid"><div><h3>Product &amp; UI/UX Design</h3><p>Understanding problems, mapping flows, and designing clear interfaces for apps, games, and websites.</p></div><div><h3>Project Management</h3><p>Organizing tasks, priorities, and collaboration from idea toward execution.</p></div><div><h3>Technical Implementation</h3><p>Prototyping and building with an awareness of feasibility and development constraints.</p></div></div><ToolStack /></section>
   </>
 }
 
