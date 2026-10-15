@@ -114,6 +114,80 @@
       }
     ]
   },
+
+    "bloom": {
+    "title": "Bloom",
+    "metadata": [
+      {
+        "label": "Duration",
+        "value": "1 Weeks",
+        "tags": [],
+        "links": []
+      },
+      {
+        "label": "Role",
+        "value": "Product Designer & AI-Assisted Development",
+        "tags": [],
+        "links": []
+      },
+      {
+        "label": "Contribution",
+        "value": "Product concept, feature scoping, user-flow planning, UI/UX design direction, Figma screen development with AI-assisted tools, and iterative web prototyping with Berrry.app. I worked across product decisions, visual consistency, and feature behavior.",
+        "tags": [],
+        "links": []
+      },
+      {
+        "label": "Tech Stack",
+        "value": "",
+        "tags": [
+          "Figma",
+          "UI Design",
+          "Berrry.app",
+          "Design Thinking"
+        ],
+        "links": []
+      },
+      {
+        "label": "Links",
+        "value": "",
+        "tags": [],
+        "links": [
+          {
+            "label": "View Prototype",
+            "href": "https://bloom-postpartum-well-being.berrry.app"
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "slug": "fruggiestales",
+        "title": "Fruggies Tales",
+        "description": "Interactive storytelling application integrated with augmented reality.",
+        "tags": [
+          "AR • Storytelling"
+        ]
+      },
+      {
+        "slug": "dentalclinic",
+        "title": "Digi Dental Clinic",
+        "description": "Modern dental clinic website with online appointment booking.",
+        "tags": [
+          "UI/UX Design • Healthcare Website"
+        ]
+      },
+      {
+        "slug": "bside",
+        "title": "B-Side",
+        "description": "An iOS app that organizes screenshots by why they were saved and helps people rediscover them.",
+        "tags": [
+          "Product Design • iOS Development"
+        ]
+      }
+    ],
+    "source": "bloom.html"
+  },
+
   "kiddly": {
     "title": "Kiddly",
     "metadata": [
@@ -262,78 +336,6 @@
       }
     ],
     "source": "detail_lyzmid(1).html"
-  },
-  "eloka": {
-    "title": "Eloka",
-    "metadata": [
-      {
-        "label": "Duration",
-        "value": "2 Months",
-        "tags": [],
-        "links": []
-      },
-      {
-        "label": "Role",
-        "value": "UI/UX Designer",
-        "tags": [],
-        "links": []
-      },
-      {
-        "label": "Contribution",
-        "value": "Designed the end-to-end mobile app experience, including user research, user flow, wireframing, and high-fidelity interface design focused on sustainable tourism and eco-friendly travel experiences.",
-        "tags": [],
-        "links": []
-      },
-      {
-        "label": "Tech Stack",
-        "value": "",
-        "tags": [
-          "Figma",
-          "UI Design",
-          "User Research",
-          "Design Thinking"
-        ],
-        "links": []
-      },
-      {
-        "label": "Links",
-        "value": "",
-        "tags": [],
-        "links": [
-          {
-            "label": "View Design",
-            "href": "https://dribbble.com/shots/26472699-Eloka-Travel-while-supporting-sustainability"
-          }
-        ]
-      }
-    ],
-    "related": [
-      {
-        "slug": "fruggiestales",
-        "title": "Fruggies Tales",
-        "description": "Interactive storytelling application integrated with augmented reality.",
-        "tags": [
-          "AR • Storytelling"
-        ]
-      },
-      {
-        "slug": "dentalclinic",
-        "title": "Digi Dental Clinic",
-        "description": "Modern dental clinic website with online appointment booking.",
-        "tags": [
-          "UI/UX Design • Healthcare Website"
-        ]
-      },
-      {
-        "slug": "bside",
-        "title": "B-Side",
-        "description": "An iOS app that organizes screenshots by why they were saved and helps people rediscover them.",
-        "tags": [
-          "Product Design • iOS Development"
-        ]
-      }
-    ],
-    "source": "detail_eloka(1).html"
   },
   "fruggiestales": {
     "title": "Fruggies Tales",

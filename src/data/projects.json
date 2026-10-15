@@ -17,6 +17,15 @@
     "image": "/image/rawrndry/rawrndry_banner.png",
     "type": "Game"
   },
+    {
+    "slug": "bloom",
+    "title": "Bloom",
+    "category": "Product design",
+    "label": "Web App • UI/UX",
+    "description": "A postpartum mental health platform that provides resources and support for new mothers.",
+    "image": "/image/bloom/bloom-banner.png",
+    "type": "Web App"
+  },
   {
     "slug": "kiddly",
     "title": "Kiddly",
@@ -34,15 +43,6 @@
     "description": "A multilingual personality analysis platform built with WordPress.",
     "image": "/image/banner/banner_lyzmid.png",
     "type": "Website"
-  },
-  {
-    "slug": "eloka",
-    "title": "Eloka",
-    "category": "Product design",
-    "label": "Mobile App • UI/UX",
-    "description": "Eco-tourism application encouraging sustainable travel experiences.",
-    "image": "/image/banner/banner_eloka.png",
-    "type": "Mobile App"
   },
   {
     "slug": "fruggiestales",
