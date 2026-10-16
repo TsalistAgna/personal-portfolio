@@ -170,3 +170,188 @@
 }
 @media (max-width: 480px) { .case-sidebar { grid-template-columns: 1fr; }.story-content > .hero-showcase { margin-bottom: 3.5rem; }.story-content .hero-showcase .media-placeholder { min-height: 230px; }.listing-stats { gap: 2rem; }.listing-stats strong { font-size: 1.8rem; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+/* ========================================================================
+   PLAYFUL EDITORIAL MOTION — added October 2026
+   No animation library required. Keep the existing design/layout intact.
+   ======================================================================== */
+
+/* Reusable one-time scroll reveal (Reveal.jsx / useReveal). */
+.motion-reveal {
+  opacity: 0;
+  transform: translate3d(0, 21px, 0);
+  transition:
+    opacity 560ms cubic-bezier(.22, 1, .36, 1),
+    transform 560ms cubic-bezier(.22, 1, .36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.motion-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero: three lines arrive independently, then the selection handles pop in. */
+.hero-line {
+  display: block;
+  overflow: hidden;
+  padding: .085em .065em;
+  margin: -.085em -.065em;
+}
+.hero-line-content {
+  display: block;
+  animation: hero-line-arrive 800ms cubic-bezier(.22, 1, .36, 1) both;
+}
+.hero-line:nth-child(1) .hero-line-content { animation-delay: 110ms; }
+.hero-line:nth-child(2) .hero-line-content { animation-delay: 225ms; }
+.hero-line:nth-child(3) .hero-line-content { animation-delay: 340ms; }
+@keyframes hero-line-arrive {
+  from { opacity: 0; transform: translate3d(0, .7em, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+.hero-kicker { animation: hero-soft-arrive 450ms 30ms both; }
+.hero-cursors { animation: hero-soft-arrive 560ms 610ms both; }
+.hero-bottom { animation: hero-soft-arrive 560ms 730ms both; }
+@keyframes hero-soft-arrive {
+  from { opacity: 0; transform: translate3d(0, 12px, 0); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Reveal the existing portrait with a gentle spring-like overshoot. */
+.hero-portrait { animation: hero-portrait-arrive 760ms 460ms cubic-bezier(.2, 1.4, .4, 1) both; }
+@keyframes hero-portrait-arrive {
+  from { opacity: 0; transform: translate3d(0, 18px, 0) rotate(-5deg) scale(.82); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) rotate(8deg) scale(1); }
+}
+.hero-spark { animation: hero-spark-arrive 880ms 510ms cubic-bezier(.22, 1, .36, 1) both; }
+@keyframes hero-spark-arrive {
+  from { opacity: 0; transform: rotate(-32deg) scale(.78); }
+  to { opacity: 1; transform: rotate(-15deg) scale(1); }
+}
+
+/* The highlighted word stays legible while its border draws from left to right. */
+.hero-selection { border-color: transparent; }
+.hero-selection::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid #46bde2;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: hero-outline-draw 480ms 1080ms cubic-bezier(.22, 1, .36, 1) forwards;
+  pointer-events: none;
+}
+@keyframes hero-outline-draw { to { transform: scaleX(1); } }
+.hero-selection i {
+  transform: scale(0);
+  animation: hero-handle-pop 310ms cubic-bezier(.2, 1.5, .4, 1) forwards;
+}
+.hero-selection i:nth-child(1) { animation-delay: 1310ms; }
+.hero-selection i:nth-child(2) { animation-delay: 1360ms; }
+.hero-selection i:nth-child(3) { animation-delay: 1410ms; }
+.hero-selection i:nth-child(4) { animation-delay: 1460ms; }
+@keyframes hero-handle-pop { to { transform: scale(1); } }
+
+/* Project previews: image lift, soft tint, and context-sensitive CTA. */
+.project-art {
+  isolation: isolate;
+  transition: background-color 350ms cubic-bezier(.22, 1, .36, 1);
+}
+.project-art::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 75% 25%, rgb(255 255 255 / .55), transparent 65%);
+  opacity: 0;
+  transition: opacity 350ms ease;
+  pointer-events: none;
+}
+.project-art-inner { position: relative; z-index: 1; transition: transform 400ms cubic-bezier(.22, 1, .36, 1); }
+.project-count { z-index: 2; }
+.project-view-label {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: .9rem;
+  border: 1px solid rgb(23 23 23 / .14);
+  border-radius: 100px;
+  padding: .65rem 1rem;
+  background: rgb(255 255 255 / .93);
+  color: var(--color-ink);
+  box-shadow: 0 9px 24px rgb(23 23 23 / .1);
+  font: 600 .76rem var(--font-sans);
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 250ms ease, transform 320ms cubic-bezier(.22, 1, .36, 1);
+  pointer-events: none;
+}
+.project-preview .project-arrow { transition: transform 250ms cubic-bezier(.22, 1, .36, 1); }
+@media (hover: hover) and (pointer: fine) {
+  .project-preview:is(:hover, :focus-visible) .project-art::before { opacity: 1; }
+  .project-preview:is(:hover, :focus-visible) .project-art-inner { transform: translate3d(0, -5px, 0) scale(1.035) rotate(-.6deg); }
+  .project-preview:is(:hover, :focus-visible) .project-view-label { opacity: 1; transform: none; }
+  .project-preview:is(:hover, :focus-visible) .project-arrow { transform: translate3d(4px, -4px, 0); }
+  .stack-card.motion-reveal.is-visible:hover { transform: translateY(-5px) rotate(-1deg); }
+  .footer-star { transition: transform 520ms cubic-bezier(.22, 1, .36, 1); }
+  .footer-panel:hover .footer-star { transform: rotate(-8deg) scale(1.035); }
+  .footer-panel .pill-button span { transition: transform 200ms ease; }
+  .footer-panel .pill-button:hover span { transform: translate3d(4px, -4px, 0); }
+}
+
+/* Small navigation interactions; never move the layout. */
+@media (min-width: 768px) {
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--color-deep-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 260ms cubic-bezier(.22, 1, .36, 1);
+  }
+  .nav-link:is(:hover, :focus-visible, .nav-link-active)::after { transform: scaleX(1); }
+  .nav-contact span { display: inline-block; transition: transform 200ms ease; }
+  .nav-contact:is(:hover, :focus-visible) span { transform: translate3d(3px, -3px, 0); }
+}
+
+/* Touch: never depend on hover for important content. */
+@media (hover: none), (pointer: coarse) {
+  .project-preview:hover .project-art-inner { transform: none; }
+  .project-preview:hover .project-arrow { transform: none; }
+  .project-view-label { opacity: 1; transform: none; box-shadow: none; }
+  .stack-card:hover { transform: none; }
+}
+@media (max-width: 767px) {
+  .hero-line-content { animation-duration: 650ms; }
+  .project-view-label { top: .85rem; right: .85rem; padding: .5rem .75rem; font-size: .68rem; }
+  .nav-links[data-open="true"] { animation: mobile-nav-arrive 250ms cubic-bezier(.22, 1, .36, 1) both; }
+  @keyframes mobile-nav-arrive {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+/* Accessibility: no invisible content and no delayed motion. */
+@media (prefers-reduced-motion: reduce) {
+  .motion-reveal, .motion-reveal.is-visible { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hero-kicker, .hero-line-content, .hero-cursors, .hero-bottom,
+  .hero-portrait, .hero-spark, .hero-selection::before, .hero-selection i,
+  .nav-links[data-open="true"] { animation: none !important; opacity: 1 !important; }
+  .hero-line-content { transform: none !important; }
+  .hero-portrait { transform: rotate(8deg) !important; }
+  .hero-spark { transform: rotate(-15deg) !important; }
+  .hero-selection::before { transform: scaleX(1) !important; }
+  .hero-selection i { transform: scale(1) !important; }
+  .project-view-label { opacity: 1 !important; transform: none !important; }
+  .project-art-inner, .project-arrow, .footer-star { transform: none !important; }
+  .nav-link::after { transition: none !important; }
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Media from './Media.jsx'
+import Reveal from './Reveal.jsx'
 
 const contents = import.meta.glob('../content/*.html', { query: '?raw', import: 'default' })
 const getSlug = href => href?.match(/^detail_(.+)\.html(?:#.*)?$/i)?.[1]?.toLowerCase()
@@ -28,6 +29,11 @@ function renderNode(node, key) {
     return <a key={key} href={props.href} className={props.className}>{body}</a>
   }
   if (tag === 'h1') return null // The page header owns the sole h1.
+  // Animate content sections once without touching their copy or image paths.
+  if ((tag === 'div' && (node.classList.contains('section-block') || node.classList.contains('hero-showcase'))) ||
+      (tag === 'figure' && node.classList.contains('case-visual'))) {
+    return <Reveal as={tag} {...props}>{children}</Reveal>
+  }
   return React.createElement(tag, props, ...children)
 }
 
