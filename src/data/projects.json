@@ -15,7 +15,7 @@
     "label": "Game UI/UX • Project Management",
     "description": "A prehistoric laundry simulation game built around satisfying, hands-on interactions.",
     "image": "/image/rawrndry/rawrndry_banner.png",
-    "type": "Game"
+    "type": "iOS Game"
   },
     {
     "slug": "bloom",
@@ -33,13 +33,13 @@
     "label": "Product Design • UI/UX",
     "description": "Parental companion application that helps parents understand children's digital consumption.",
     "image": "/image/banner/banner_kiddly.png",
-    "type": "Mobile App"
+    "type": "iOS App"
   },
   {
     "slug": "lyzmid",
     "title": "LYZMID",
     "category": "Product design",
-    "label": "WordPress • UI/UX",
+    "label": "WordPress • UI/UX • Usability Testing",
     "description": "A multilingual personality analysis platform built with WordPress.",
     "image": "/image/banner/banner_lyzmid.png",
     "type": "Website"
@@ -51,7 +51,7 @@
     "label": "AR • Storytelling",
     "description": "Interactive storytelling application integrated with augmented reality.",
     "image": "/image/banner/banner-frugiestale.png",
-    "type": "AR App"
+    "type": "AR Mobile App"
   },
   {
     "slug": "dentalclinic",
@@ -60,6 +60,6 @@
     "label": "UI/UX Design • Healthcare Website",
     "description": "Modern dental clinic website with online appointment booking.",
     "image": "/image/banner/dentalclinic_banner.png",
-    "type": "Website"
+    "type": "Landing Page"
   }
 ]
