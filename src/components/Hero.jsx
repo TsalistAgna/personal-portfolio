@@ -34,7 +34,7 @@ export default function Hero() {
   }
 
   return <section ref={heroRef} className="site-shell hero relative" onPointerMove={moveCursors} onPointerLeave={resetCursors}>
-    <div className="hero-kicker"><span className="status-dot" /> Tsalist Agna, or Nana <span className="hero-kicker-line" /> Product designer</div>
+    <div className="hero-kicker"><span className="status-dot" /> Tsalist Agna, or Nana <span className="hero-kicker-line" /> Product designer who codes</div>
     <div className="relative z-10">
       <h1 className="hero-title">
         <span className="hero-line"><span className="hero-line-content">Designing products.</span></span>
@@ -44,9 +44,9 @@ export default function Hero() {
       <div className="hero-cursors" aria-hidden="true">
         <DesignCursor label="Product Design" variant="design" />
         <span className="hero-canvas-note">A little curiosity. A lot of making.</span>
-        <DesignCursor label="Making it happen" variant="build" />
+        <DesignCursor label="Design → Code" variant="build" />
       </div>
-      <div className="hero-bottom"><p className="max-w-[37rem] text-lg leading-relaxed text-ink-muted md:text-xl">I work across product design, project management, and implementation. I like shaping useful ideas, organizing the work, and understanding how the product gets built.</p>
+      <div className="hero-bottom"><p className="max-w-[37rem] text-lg leading-relaxed text-ink-muted md:text-xl">I’m a product designer who codes. I shape user experiences, manage the process, and build what I design—connecting thoughtful design decisions with hands-on development to bring useful ideas to life.</p>
         <Link className="pill-button pill-dark" to="/#selected">Explore my work <span aria-hidden="true">↘</span></Link>
       </div>
     </div>
