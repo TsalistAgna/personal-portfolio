@@ -9,24 +9,6 @@
     "image": "/image/bside/bside-banner.png"
   },
   {
-    "slug": "rawrndry",
-    "title": "Rawrndry",
-    "category": "Product design",
-    "label": "Game UI/UX • Project Management",
-    "description": "A prehistoric laundry simulation game built around satisfying, hands-on interactions.",
-    "image": "/image/rawrndry/rawrndry_banner.png",
-    "type": "iOS Game"
-  },
-  {
-    "slug": "bloom",
-    "title": "Bloom",
-    "category": "Product design",
-    "label": "Web App • UI/UX",
-    "description": "A postpartum mental health platform that provides resources and support for new mothers.",
-    "image": "/image/bloom/bloom-banner.png",
-    "type": "Web App"
-  },
-  {
     "slug": "grow-academy",
     "title": "Grow Academy",
     "category": "UI/UX Design",
@@ -43,6 +25,33 @@
     "description": "Parental companion application that helps parents understand children's digital consumption.",
     "image": "/image/banner/banner_kiddly.png",
     "type": "iOS App"
+  },
+  {
+    "slug": "formly",
+    "title": "Formly",
+    "category": "UI/UX Design",
+    "type": "Web App",
+    "label": "Web App • UI/UX",
+    "description": "A case-data entry concept that brings intake notes, conditional fields, and structured information into one focused workspace.",
+    "image": "/image/formly/formly-cover-1400x800.png"
+  },
+  {
+    "slug": "rawrndry",
+    "title": "Rawrndry",
+    "category": "Product design",
+    "label": "Game UI/UX • Project Management",
+    "description": "A prehistoric laundry simulation game built around satisfying, hands-on interactions.",
+    "image": "/image/rawrndry/rawrndry_banner.png",
+    "type": "iOS Game"
+  },
+  {
+    "slug": "bloom",
+    "title": "Bloom",
+    "category": "Product design",
+    "label": "Web App • UI/UX",
+    "description": "A postpartum mental health platform that provides resources and support for new mothers.",
+    "image": "/image/bloom/bloom-banner.png",
+    "type": "Web App"
   },
   {
     "slug": "lyzmid",

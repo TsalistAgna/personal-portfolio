@@ -524,5 +524,72 @@
       }
     ],
     "source": "grow-academy.html"
+  },
+  "formly": {
+    "title": "Formly",
+    "description": "A case-data entry concept that brings intake notes, conditional fields, and structured information into one focused workspace.",
+    "metadata": [
+      {
+        "label": "Role",
+        "value": "UI/UX Designer",
+        "tags": [],
+        "links": []
+      },
+      {
+        "label": "Contribution",
+        "value": "Problem framing, information architecture, conditional form flows, interface design, design-system foundations, and desktop and mobile screen exploration.",
+        "tags": [],
+        "links": []
+      },
+      {
+        "label": "Tools",
+        "value": "",
+        "tags": [
+          "Figma",
+          "UI Design",
+          "Interaction Design",
+          "Design Systems"
+        ],
+        "links": []
+      },
+      {
+        "label": "Links",
+        "value": "",
+        "tags": [],
+        "links": [
+          {
+            "label": "View Figma",
+            "href": "https://www.figma.com/design/PooUTqhLoQfD92aviS4eyd/Untitled?node-id=0-1"
+          }
+        ]
+      }
+    ],
+    "related": [
+      {
+        "slug": "bloom",
+        "title": "Bloom",
+        "description": "A postpartum mental health platform that provides resources and support for new mothers.",
+        "tags": [
+          "Web App • UI/UX"
+        ]
+      },
+      {
+        "slug": "grow-academy",
+        "title": "Grow Academy",
+        "description": "A clearer path from a first rental to a growing business. A landing-page design concept for short-term rental education.",
+        "tags": [
+          "Landing Page • UI/UX"
+        ]
+      },
+      {
+        "slug": "bside",
+        "title": "B-Side",
+        "description": "An iOS app that organizes screenshots by why they were saved and helps people rediscover them.",
+        "tags": [
+          "Product Design • iOS Development"
+        ]
+      }
+    ],
+    "source": "formly.html"
   }
 }

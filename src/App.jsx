@@ -64,7 +64,7 @@ function Home() {
     <Hero />
     <Reveal as="section" className="site-shell intro-strip" aria-label="How I work"><span>01 / FIND THE REAL PROBLEM</span><span>02 / MAKE CLEAR DECISIONS</span><span>03 / DESIGN TO EXECUTION</span></Reveal>
     <section id="selected" className="site-shell section-space"><SectionHeader index="01" eyebrow="SELECTED WORK" title={<>Products I’ve<br />worked on.</>} />
-      <div className="project-grid">{projects.map((p,i) => <ProjectPreview key={p.slug} project={p} index={i} featured={i === 0} />)}</div>
+      <div className="project-grid">{projects.map((p,i) => <ProjectPreview key={p.slug} project={p} index={i} />)}</div>
       <div className="mt-12"><Link className="text-link" to="/work">See the project index ↗</Link></div>
     </section>
     <section id="approach" className="approach-band"><div className="site-shell section-space"><SectionHeader index="02" eyebrow="HOW I WORK" title={<>From question<br />to something useful.</>} /><div className="approach-grid">
@@ -80,7 +80,7 @@ function Home() {
 function Listing() {
   return <main className="site-shell"><Reveal className="listing-hero"><span className="eyebrow">PORTFOLIO / PRODUCT WORK</span><h1 className="font-display max-w-5xl text-6xl leading-[0.98] font-medium tracking-tight md:text-8xl">Products, people<br /><em className="font-normal text-deep-accent">& the process.</em></h1><p className="max-w-xl text-lg text-ink-muted">Apps, games, and websites shaped through research, product design, project management, and implementation.</p>
       <div className="listing-stats"><div><strong>{projects.length}</strong><span>Projects</span></div><div><strong>3+</strong><span>Years Designing</span></div><div><strong>100+</strong><span>Screens Designed</span></div></div></Reveal>
-    <section className="section-space pt-0"><SectionHeader index="01" eyebrow="INDEX" title="Product case studies" /><div className="project-grid">{projects.map((p,i) => <ProjectPreview key={p.slug} project={p} index={i} featured={i === 0} />)}</div></section>
+    <section className="section-space pt-0"><SectionHeader index="01" eyebrow="INDEX" title="Product case studies" /><div className="project-grid">{projects.map((p,i) => <ProjectPreview key={p.slug} project={p} index={i} />)}</div></section>
   </main>
 }
 

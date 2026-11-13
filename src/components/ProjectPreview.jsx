@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom'
 import Media from './Media.jsx'
 import { useReveal } from './Reveal.jsx'
 
-export default function ProjectPreview({ project, index = 0, featured = false }) {
+export default function ProjectPreview({ project, index = 0 }) {
   const { ref, isVisible } = useReveal()
 
   return <Link
     ref={ref}
     to={`/work/${project.slug}`}
-    className={`project-preview group motion-reveal ${isVisible ? 'is-visible' : ''} ${featured ? 'project-preview-featured' : ''}`}
+    className={`project-preview group motion-reveal ${isVisible ? 'is-visible' : ''}`}
     style={{ '--reveal-delay': `${Math.min(index % 3, 2) * 85}ms` }}
     data-project={project.slug}
   >

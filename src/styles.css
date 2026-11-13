@@ -75,9 +75,7 @@
 .intro-strip { display: flex; justify-content: space-between; gap: 1rem; border-block: 1px solid var(--color-line); padding-block: 1.25rem; color: var(--color-ink-muted); font-size: .69rem; font-weight: 700; letter-spacing: .1em; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: 1.6rem; row-gap: 4.2rem; }
 .project-preview { display: block; }
-.project-preview-featured { grid-column: 1 / -1; }
 .project-art { position: relative; display: grid; place-items: center; height: clamp(270px, 34vw, 440px); overflow: hidden; background: #e1ddf4; border-radius: 4px; padding: 2.5rem; }
-.project-preview-featured .project-art { height: clamp(350px, 51vw, 660px); }
 .project-art-1 { background: #dbe7e5; }.project-art-2 { background: #eee3d2; }.project-art-3 { background: #d9dfed; }
 .project-art-inner { width: min(85%, 740px); height: 80%; transition: transform .4s ease; }
 .project-preview:hover .project-art-inner { transform: scale(1.035) rotate(-.6deg); }
@@ -151,6 +149,8 @@
 .rawrndry-story .hero-showcase img { width: 100%; max-height: none; border-radius: 2px; }
 .bside-story > .hero-showcase { background: #cfddfa; padding: clamp(.7rem,2.5vw,2rem); }
 .bside-story .hero-showcase img { width: 100%; max-height: none; border-radius: 2px; }
+.formly-story > .hero-showcase { background: #edf3eb; padding: clamp(.5rem, 2vw, 1.5rem); }
+.formly-story .hero-showcase img { width: 100%; height: auto; max-height: none; aspect-ratio: 7 / 4; object-fit: contain; }
 .story-content .story-pullquote { margin: 2.5rem 0 0; border-left: 4px solid #a24a2e; padding: .35rem 0 .35rem 1.5rem; font: 500 clamp(1.55rem,2.5vw,2.3rem)/1.4 var(--font-display); letter-spacing: -.035em; }
 .story-content .case-visual { margin-top: 2rem; }
 .story-content .case-visual img { width: 100%; max-height: none; height: auto; border-radius: 3px; }
@@ -165,7 +165,7 @@
   .site-shell { width: min(100% - 2rem, 1360px); }.site-header .site-shell { position: relative; }
   .nav-links { position: absolute; top: 100%; left: -1rem; right: -1rem; flex-direction: column; align-items: stretch; gap: 0; padding: 1rem; background: var(--color-paper); border-bottom: 1px solid var(--color-line); box-shadow: 0 20px 30px rgb(23 23 23 / .08); }.nav-link { padding: .9rem .3rem; font-size: 1rem; }.nav-contact { margin-top: .6rem; justify-content: space-between; }
   .hero { min-height: auto; padding-block: 6rem 5rem; }.hero-kicker { margin-bottom: 2rem; }.hero-title { font-size: clamp(3rem, 10.6vw, 5.5rem); }.hero-bottom { align-items: start; flex-direction: column; margin-top: 3rem; }.hero-spark { top: 5%; right: -3rem; }.hero-portrait { top: .5rem; right: .5rem; width: 66px; height: 66px; }
-  .intro-strip { flex-direction: column; gap: .65rem; }.section-heading { flex-direction: column; align-items: start; margin-bottom: 2.2rem; }.project-grid { grid-template-columns: 1fr; row-gap: 3.2rem; }.project-preview-featured { grid-column: auto; }.project-art,.project-preview-featured .project-art { height: clamp(260px, 75vw, 500px); padding: 1rem; }
+  .intro-strip { flex-direction: column; gap: .65rem; }.section-heading { flex-direction: column; align-items: start; margin-bottom: 2.2rem; }.project-grid { grid-template-columns: 1fr; row-gap: 3.2rem; }.project-art { height: clamp(260px, 75vw, 500px); padding: 1rem; }
   .approach-grid,.capability-grid { grid-template-columns: 1fr; gap: 2.5rem; margin-top: 3rem; }.approach-grid h3 { margin-top: 1rem; }.about-grid { grid-template-columns: 1fr; gap: 2rem; }.capability-top,.tools-line { flex-direction: column; gap: .5rem; }.listing-hero { padding-bottom: 5rem; }.listing-hero h1 { font-size: clamp(3.5rem, 10vw, 6rem); }.case-heading { margin-top: 4rem; }.case-heading h1 { font-size: clamp(3.4rem, 11vw, 6rem); }.case-star { font-size: 4rem; right: 0; }.case-sidebar { grid-template-columns: 1fr 1fr; }.related-grid { grid-template-columns: 1fr; }.story-content .process-grid { grid-template-columns: 1fr; }.footer-star { right: -6rem; font-size: 20rem; }
 }
 @media (max-width: 480px) { .case-sidebar { grid-template-columns: 1fr; }.story-content > .hero-showcase { margin-bottom: 3.5rem; }.story-content .hero-showcase .media-placeholder { min-height: 230px; }.listing-stats { gap: 2rem; }.listing-stats strong { font-size: 1.8rem; } }

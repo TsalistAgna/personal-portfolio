@@ -50,5 +50,5 @@ export default function RichContent({ slug }) {
     const doc = new DOMParser().parseFromString(`<main>${source}</main>`, 'text/html')
     return Array.from(doc.body.firstElementChild.childNodes).map((node, i) => renderNode(node, i))
   }, [source])
-  return <div className={`story-content ${slug === 'rawrndry' ? 'rawrndry-story' : ''} ${slug === 'bside' ? 'bside-story' : ''}`}>{nodes}</div>
+  return <div className={`story-content ${slug === 'rawrndry' ? 'rawrndry-story' : ''} ${slug === 'bside' ? 'bside-story' : ''} ${slug === 'formly' ? 'formly-story' : ''}`}>{nodes}</div>
 }
