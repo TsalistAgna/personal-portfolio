@@ -16,6 +16,36 @@ function ScrollManager() {
   useEffect(() => {
     const slug = pathname.startsWith('/work/') ? pathname.split('/')[2] : null
     document.title = slug && caseStudies[slug] ? `${caseStudies[slug].title} — Tsalist Agna` : pathname === '/work' ? 'Product Work — Tsalist Agna' : 'Tsalist Agna — Product Design & Project Management'
+    const project = projects.find(item => item.slug === slug)
+    const description = caseStudies[slug]?.description || project?.description || 'Tsalist Agna — Product Designer with a project management perspective. Selected digital products, design decisions, and creative work.'
+    const metadata = {
+      description,
+      'og:title': document.title,
+      'og:description': description,
+      'og:type': 'website',
+      'og:url': new URL(pathname, window.location.origin).href,
+      'twitter:card': project ? 'summary_large_image' : 'summary',
+      'twitter:title': document.title,
+      'twitter:description': description,
+    }
+    if (project) {
+      metadata['og:image'] = new URL(project.image, window.location.origin).href
+      metadata['og:image:alt'] = `${project.title} design concept`
+      metadata['twitter:image'] = metadata['og:image']
+    }
+    for (const key of ['og:image', 'og:image:alt', 'twitter:image']) {
+      if (!metadata[key]) document.querySelector(`meta[${key.startsWith('og:') ? 'property' : 'name'}="${key}"]`)?.remove()
+    }
+    for (const [key, content] of Object.entries(metadata)) {
+      const attribute = key.startsWith('og:') ? 'property' : 'name'
+      let meta = document.querySelector(`meta[${attribute}="${key}"]`)
+      if (!meta) {
+        meta = document.createElement('meta')
+        meta.setAttribute(attribute, key)
+        document.head.appendChild(meta)
+      }
+      meta.content = content
+    }
     if (hash) {
       const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'
       requestAnimationFrame(() => document.getElementById(hash.slice(1))?.scrollIntoView({ behavior }))

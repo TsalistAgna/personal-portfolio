@@ -17,7 +17,7 @@
     "image": "/image/rawrndry/rawrndry_banner.png",
     "type": "iOS Game"
   },
-    {
+  {
     "slug": "bloom",
     "title": "Bloom",
     "category": "Product design",
@@ -25,6 +25,15 @@
     "description": "A postpartum mental health platform that provides resources and support for new mothers.",
     "image": "/image/bloom/bloom-banner.png",
     "type": "Web App"
+  },
+  {
+    "slug": "grow-academy",
+    "title": "Grow Academy",
+    "category": "UI/UX Design",
+    "label": "Landing Page • UI/UX",
+    "description": "A clearer path from a first rental to a growing business. A landing-page design concept for short-term rental education.",
+    "image": "/image/grow-academy/grow-academy-portfolio-1400x800.png",
+    "type": "Landing Page"
   },
   {
     "slug": "kiddly",

@@ -114,8 +114,7 @@
       }
     ]
   },
-
-    "bloom": {
+  "bloom": {
     "title": "Bloom",
     "metadata": [
       {
@@ -187,7 +186,6 @@
     ],
     "source": "bloom.html"
   },
-
   "kiddly": {
     "title": "Kiddly",
     "metadata": [
@@ -471,5 +469,60 @@
       }
     ],
     "source": "detail_dentalclinic(1).html"
+  },
+  "grow-academy": {
+    "title": "Grow Academy",
+    "description": "A clearer path from a first rental to a growing business. A landing-page design concept for short-term rental education.",
+    "metadata": [
+      {
+        "label": "Role",
+        "value": "UI/UX Designer",
+        "tags": [],
+        "links": []
+      },
+      {
+        "label": "Contribution",
+        "value": "Landing-page structure, content hierarchy, programme comparison, visual design, and portfolio adaptation.",
+        "tags": [],
+        "links": []
+      },
+      {
+        "label": "Tools",
+        "value": "",
+        "tags": [
+          "Figma",
+          "UI Design",
+          "Content Design"
+        ],
+        "links": []
+      }
+    ],
+    "related": [
+      {
+        "slug": "bloom",
+        "title": "Bloom",
+        "description": "A postpartum mental health platform that provides resources and support for new mothers.",
+        "tags": [
+          "Web App • UI/UX"
+        ]
+      },
+      {
+        "slug": "bside",
+        "title": "B-Side",
+        "description": "An iOS app that organizes screenshots by why they were saved and helps people rediscover them.",
+        "tags": [
+          "Product Design • iOS Development"
+        ]
+      },
+      {
+        "slug": "dentalclinic",
+        "title": "Digi Dental Clinic",
+        "description": "Modern dental clinic website with online appointment booking.",
+        "tags": [
+          "UI/UX Design • Healthcare Website"
+        ]
+      }
+    ],
+    "source": "grow-academy.html"
   }
 }

@@ -20,7 +20,7 @@ function renderNode(node, key) {
     else if (name === 'style' || name.startsWith('on')) continue
     else props[name] = value
   }
-  if (tag === 'img') return <Media key={key} src={props.src?.startsWith('image/') ? `/${props.src}` : props.src} alt={props.alt || ''} className={props.className || ''} />
+  if (tag === 'img') return <Media key={key} src={props.src?.startsWith('image/') ? `/${props.src}` : props.src} alt={props.alt || ''} className={props.className || ''} loading={props.loading || 'lazy'} />
   if (tag === 'a') {
     const slug = getSlug(props.href)
     const body = children.length ? children : props.href
